@@ -5,8 +5,10 @@ import { SBItem } from "../SBItem/SBItem";
 export default function StagesBoard() {
     return (
     <div className={s.board}>
-        {/* <img src={Img} alt="bg" className={s.board_image}/> */}
-        <SBItem itemNo={1} posText={"YOUR INFO"} active={false} />
+        <SBItem itemNo={1} posText={"YOUR INFO"} active={1} />
+        <SBItem itemNo={2} posText={"SELECT PLAN"} active={1} />
+        <SBItem itemNo={3} posText={"ADD-ONS"} active={1} />
+        <SBItem itemNo={4} posText={"SUMMARY"} active={1} />
     </div>
     )
 }
