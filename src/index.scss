@@ -1,0 +1,63 @@
+$marine-blue: hsl(213, 96%, 18%);
+$purplish-blue: hsl(243, 100%, 62%); 
+$pastel-blue: hsl(228, 100%, 84%);
+$light-blue: hsl(206, 94%, 87%);
+$strawberry-red: hsl(354, 84%, 57%);
+$neutral-cool-gray: hsl(231, 11%, 63%);
+$light-gray: hsl(229, 24%, 87%);
+$magnolia: hsl(217, 100%, 97%);
+$alabaster: hsl(231, 100%, 99%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('./fonts/Ubuntu Bold'), local('./fonts/Ubuntu-Bold'),
+    url('./fonts/Ubuntu-Bold.woff2') format('woff2'),
+    url('./fonts/Ubuntu-Bold.woff') format('woff'),
+    url('./fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('./fonts/Ubuntu Medium'), local('./fonts/Ubuntu-Medium'),
+    url('./fonts/Ubuntu-Medium.woff2') format('woff2'),
+    url('./fonts/Ubuntu-Medium.woff') format('woff'),
+    url('./fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: local('./fonts/Ubuntu Regular'), local('./fonts/Ubuntu-Regular'),
+    url('./fonts/Ubuntu-Regular.woff2') format('woff2'),
+    url('./fonts/Ubuntu-Regular.woff') format('woff'),
+    url('./fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+body {
+  font-family: 'Ubuntu';
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
