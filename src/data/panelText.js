@@ -1,4 +1,4 @@
-const headerText = {
+const panelText = {
     1: {
         header: "Personal info",
         text: "Please, provide your name, email address and phone number"
@@ -17,4 +17,4 @@ const headerText = {
     }
 };
 
-export { headerText };
+export { panelText };

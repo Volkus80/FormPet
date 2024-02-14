@@ -4,7 +4,7 @@ import cnBind from 'classnames/bind';
 
 const cx = cnBind.bind(s);
 
-function SBItem({itemNo, posText, active = 0}) {
+function SBItem({itemNo, posText, active = 1}) {
     const itemNoCN = cn(s.item_num, active === itemNo ? cx({active: {active}}) : "");
     console.log(itemNoCN)
     return (

@@ -1,0 +1,26 @@
+@use '../../index.scss';
+
+.button {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    &_forward {
+        background-color: index.$marine-blue;
+        color: index.$magnolia;
+        padding: 10px 15px;
+        border-radius: 10px;
+
+        &_last {
+            background-color: index.$purplish-blue;
+        }
+
+        &:hover {
+           background-color: inherit, hsla(0, 0%, 100%, 0.5);
+        }
+
+    }
+
+    
+
+}
