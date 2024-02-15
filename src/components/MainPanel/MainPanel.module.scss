@@ -1,3 +1,4 @@
+@use '../../index.scss';
 .panel{
     height: 100%;
     flex: 1 1 auto;
@@ -9,5 +10,22 @@
     &_header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 0;
+        
+
+        &_head {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: index.$marine-blue;
+            margin-top: 1rem;
+        }
+
+        &_description {
+            font-size: 14px;
+            margin-top: 10px;
+            color: index.$neutral-cool-gray;
+            text-align: justify;
+        }
     }
 }

@@ -1,21 +1,25 @@
 @use '../../index.scss';
-$num-size: 2.5rem;
+$num-size: 2rem;
 .item {
+    // box-sizing: content-box;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:stretch;
     justify-content: flex-start;
     color: index.$white;
-    font-size: 1rem;
-    margin: 20px;
+    font-size: calc($num-size / 2.5);
+    // letter-spacing: 2px;
+    margin: $num-size;
+    height: 2rem;
+    // margin-bottom: calc($num-size + 1px);
     
     &_num {
         width: $num-size;
         height: $num-size;
         border-radius: 50%;
-        border: solid index.$white 2px;
+        border: solid index.$white 1px;
         text-align: center;
-        line-height: calc($num-size - .5rem);
+        line-height: 1.8rem;
         margin-right: 1rem;
         align-self: center;
         justify-self: center;
@@ -31,11 +35,16 @@ $num-size: 2.5rem;
     &_desc {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        // align-items: start;
         justify-content: space-between;
 
         &_header {
             color: index.$light-gray;
+            font-weight: 300;
+        }
+
+        &_footer {
+        letter-spacing: 2px;
         }
     }
 }

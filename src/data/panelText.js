@@ -1,7 +1,7 @@
 const panelText = {
     1: {
         header: "Personal info",
-        text: "Please, provide your name, email address and phone number"
+        text: "Please, provide your name, email address and phone number."
     },
     2: {
         header: "Select your plan",
