@@ -1,31 +1,35 @@
 @use '../../index.scss';
+
 .panel{
     height: 100%;
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin: 0 10%;
 
     &_header {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        margin: 20px 0;
+        margin: 1.8rem 0 2.5rem;
         
 
         &_head {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
             color: index.$marine-blue;
-            margin-top: 1rem;
+            margin-top: 10px;
         }
 
         &_description {
-            font-size: 14px;
+            font-size: 1rem;
             margin-top: 10px;
             color: index.$neutral-cool-gray;
             text-align: justify;
+            letter-spacing:0cap;
+            font-weight: 100;
         }
     }
 }
