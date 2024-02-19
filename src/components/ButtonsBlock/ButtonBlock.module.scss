@@ -1,5 +1,40 @@
+@use '../../index.scss';
+
 .buttons {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: flex-end;
+    flex: 1 1 auto;
+     
 }
+
+.button {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    padding: 1rem 1.4rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &_forward {
+        background-color: index.$marine-blue;
+        color: index.$magnolia;
+        border-radius: 10px;
+        &:hover {
+           opacity: .9;
+        }
+    }
+
+    &_back {
+        padding-left: 0;
+        font-weight: 700;
+        color: index.$neutral-cool-gray;
+        &:hover {
+            color: index.$marine-blue;
+        }
+    }
+ }
