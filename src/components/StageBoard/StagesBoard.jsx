@@ -1,5 +1,4 @@
 import s from "./StagesBoard.module.scss";
-import Img from "../../images/bg-sidebar-desktop.svg";
 import { SBItem } from "../SBItem/SBItem";
 
 export default function StagesBoard() {
