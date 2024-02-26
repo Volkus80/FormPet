@@ -3,17 +3,25 @@
 .plan {
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto;
-    padding: 1rem;
+    flex: 1 1 33.3%;
+    padding: 1.2rem;
     border: 1px solid index.$neutral-cool-gray;
     border-radius: .5rem;
-    &:not(:last-child) {
-      margin-right: 1rem;
+    cursor: pointer;
+    &_selected {
+      border-color: index.$purplish-blue;
+      background-color: index.$alabaster;
     }
+    &:hover {
+      border-color: index.$purplish-blue;
+    }
+   //  &:not(:last-child) {
+   //    margin-right: 1rem;
+   //  }
      &_icon {
         width: 2.5rem;
         height: auto;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
      }
 }
 .description {
@@ -21,7 +29,7 @@
    flex-direction: column;
    p {
       &:not(:last-child) {
-         margin-bottom: .5rem;
+         margin-bottom: .3rem;
       }
    }
 }
@@ -32,13 +40,15 @@
 
 .cost {
    color: index.$light-gray;
-   font-size: .8rem;
+   font-size: 1rem;
 }
 
 .title {
    color: index.$marine-blue;
    font-size: .8rem;
-    & .active {
-      display: none;
-    }
+    
 }
+
+.active {
+   display: none;
+ }

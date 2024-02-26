@@ -1,1 +1,1 @@
-export const termSelector = (state) => state.term;
+export const termSelector = (state) => state.isMonthly;

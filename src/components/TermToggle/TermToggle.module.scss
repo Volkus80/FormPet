@@ -1,0 +1,48 @@
+@use '../../index.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    background-color: index.$alabaster;
+    border-radius: 10px;
+}
+
+.title {
+    color: index.$neutral-cool-gray;
+    letter-spacing:-1px;
+    &_active {
+        color: index.$marine-blue;
+    }
+}
+
+.check {
+    display: none;
+}
+
+.termtoggle {
+    width: 2.2rem;
+    height: 1.2rem;
+    margin: 0 1.4rem;
+    background-color: index.$marine-blue;
+    border-radius: .6rem;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+    &::before {
+        position: absolute;
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        background-color: index.$magnolia;
+        margin: .2rem;
+    }
+    &_yearly {
+        &::before {
+            transform: translateX(1rem);
+        }
+    }
+}
+

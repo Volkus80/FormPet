@@ -1,14 +1,15 @@
-import { MONTHLY, YEARLY } from "./termsConstants";
+import { MONTHLY } from "./termsConstants";
+// import { MONTHLY, YEARLY } from "./termsConstants";
 
-export const term = (state = YEARLY, action) => {
+export const isMonthly = (state = true, action) => {
     switch (action.type) {
         case MONTHLY: {
-            return (state = MONTHLY);
+            return (state = !state);
         }
 
-        case YEARLY: {
-            return (state = YEARLY);
-        }
+        // case YEARLY: {
+        //     return (state = YEARLY);
+        // }
 
         default: {
             return state;

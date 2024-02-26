@@ -6,7 +6,8 @@
     &_items {
         display: flex;
         flex-direction: row;
-        // flex: 1 1 30;
         justify-content: space-between;
+        margin-bottom: 2rem;
+        gap: 1rem;
      }
 }

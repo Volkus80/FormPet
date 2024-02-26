@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import { step } from "./steps/stepsReducer";
-import { term } from "./terms/termsReducer";
+import { isMonthly } from "./terms/termsReducer";
+import { plan } from "./plans/planReducer"; 
 
 export const rootReducer = combineReducers({
     step,
-    term
+    isMonthly,
+    plan
 });
