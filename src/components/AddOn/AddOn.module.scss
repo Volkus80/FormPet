@@ -1,0 +1,32 @@
+@use '../../index.scss';
+
+.addon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid index.$light-gray;
+    border-radius: 10px;
+
+    &_checkbox {
+        width: 10px;
+        height: 10px;
+        border-radius: 2x;
+        border: 1px solid index.$light-gray;
+        & .checked {
+            background-image: url('../../images/icon-checkmark.svg');
+            background-size: contain;
+        }
+        &_check {
+            display: none;
+        }
+    }
+
+    &_description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+}
