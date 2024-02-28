@@ -1,24 +1,43 @@
 import { useSelector, useDispatch } from "react-redux";
 import { termSelector } from "../../store/terms/termsSelectors";
+import s from "./AddOn.module.scss";
+import bind from "classnames/bind";
 
-function AddOn({ header, title, price, selected }) {
-    const isMonthly = useSelector(termSelector);
+const cx = bind.bind(s);
 
-    const addonPrice = isMonthly ? price : price * 10;
-    const termName = isMonthly ? "mo" : "yr";
+function AddOn({ id, header, title, price, selected, clickHandler }) {
+  const isMonthly = useSelector(termSelector);
 
-    return (
-        <div className='addon'>
-            <label className='addon_checkbox checked'>
-                <input type='checkbox' checked={selected} className='addon_checkbox_check' />
-            </label>
-            <div className='addon_description'>
-                <p className='addon_description_header'>{header}</p>
-                <p className='addon_description_title'>{title}</p>
-            </div>
-            <p className='addon_price'>{`\+\$${addonPrice}\/${termName}`}</p>
-        </div>
-    );
+  const addonPrice = isMonthly ? price : price * 10;
+  const termName = isMonthly ? "mo" : "yr";
+
+  const checkboxStyle = cx({
+    addon_checkbox: true,
+    checked: selected,
+  });
+
+  const addonStyle = cx({
+    addon: true,
+    selected,
+  });
+
+  return (
+    <div className={addonStyle}>
+      <label className={checkboxStyle}>
+        <input
+          type="checkbox"
+          checked={selected}
+          className={s.addon_checkbox_check}
+          onChange={(id) => clickHandler(id)}
+        />
+      </label>
+      <div className={s.addon_description}>
+        <p className={s.addon_description_header}>{header}</p>
+        <p className={s.addon_description_title}>{title}</p>
+      </div>
+      <p className={s.addon_price}>{`\+\$${addonPrice}\/${termName}`}</p>
+    </div>
+  );
 }
 
 export { AddOn };

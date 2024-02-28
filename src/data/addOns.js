@@ -21,3 +21,5 @@ const addOns = [
         selected: false
     }
 ];
+
+export {addOns};
