@@ -1,3 +1,5 @@
-const planSelector = state => state.plan;
+const planSelector = (state) => state.plan;
 
-export {planSelector};
+const selectedPlanSelector = (state) => state.plan.find((p) => p.selected);
+
+export { planSelector, selectedPlanSelector };

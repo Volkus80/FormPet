@@ -1,14 +1,25 @@
-import { SET_PLAN } from "./plansConstants"
+import { SET_PLAN } from "./plansConstants";
+import { plans } from "../../data/plans";
 
- const setPlanReducer = (state = 1, action) => {
-    switch (action.type) {
-        case SET_PLAN: {
-            return action.planId;
+const initialState = plans;
+
+const setPlanReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_PLAN: {
+      return state.map((plan) => {
+        if (plan.selected) {
+          plan.selected = false;
         }
-        default: {
-            return state;
+        if (plan.id === action.planId) {
+          plan.selected = !plan.selected;
         }
+        return plan;
+      });
     }
-}
+    default: {
+      return state;
+    }
+  }
+};
 
-export {setPlanReducer as plan};
+export { setPlanReducer as plan };

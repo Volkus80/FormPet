@@ -1,0 +1,13 @@
+@use "../../index.scss";
+
+.finishing {
+    display: flex;
+    flex-direction: column;
+    &_info {
+        display: flex;
+        flex-direction: column;
+        background-color: index.$light-gray;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+}

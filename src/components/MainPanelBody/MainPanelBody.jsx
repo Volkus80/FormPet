@@ -1,6 +1,7 @@
 import { PersonalInfo } from "../PersonalInfo/PersonalInfo";
 import { SelectPlan } from "../SelectPlan/SelectPlan";
 import { AddOnsList } from "../AddOnsList/AddOnsList";
+import { Finishing } from "../Finishing/Finishing";
 
 function MainPanelBody({ step }) {
   switch (step) {
@@ -10,6 +11,8 @@ function MainPanelBody({ step }) {
       return <SelectPlan />;
     case 3:
       return <AddOnsList />;
+    case 4:
+      return <Finishing />;
     default:
       return <></>;
   }

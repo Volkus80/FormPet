@@ -1,0 +1,18 @@
+@use "../../index.scss";
+
+.finishing_addon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &_title {
+        color: index.$neutral-cool-gray;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    &_price {
+        color: index.$marine-blue;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}

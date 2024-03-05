@@ -3,11 +3,11 @@ import { InputBlock } from "../InputBlock/InputBlock";
 
 function PersonalInfo() {
   return (
-    <div className={s.container}>
+    <main className={s.container}>
       <InputBlock label={"Name"} />
       <InputBlock label={"Email address"} />
       <InputBlock label={"Phone number"} />
-    </div>
+    </main>
   );
 }
 

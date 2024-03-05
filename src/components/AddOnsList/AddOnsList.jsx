@@ -1,18 +1,11 @@
+import { useSelector } from "react-redux";
+import { addOnsSelector } from "../../store/addOnsS/addOnsSelectors";
 import { AddOn } from "../AddOn/AddOn";
-import { addOns } from "../../data/addOns";
-import { useState } from "react";
 
 function AddOnsList() {
-  const [addonslist, setAddOns] = useState(addOns);
+  const addonslist = useSelector(addOnsSelector);
 
-  const addOnHandler = (id) =>
-    setAddOns(
-      addonslist.map((ao) =>
-        ao.id === id ? { ...ao, selected: !ao.selected } : ao
-      )
-    );
-
-  const list = addOns.map((item) => (
+  const list = addonslist.map((item) => (
     <AddOn
       key={item.id}
       id={item.id}
@@ -20,11 +13,11 @@ function AddOnsList() {
       title={item.title}
       selected={item.selected}
       price={item.price}
-      clickHandler={addOnHandler}
+      // clickHandler={addOnHandler}
     />
   ));
 
-  return <div className="addons">{list}</div>;
+  return <main className="addons">{list}</main>;
 }
 
 export { AddOnsList };

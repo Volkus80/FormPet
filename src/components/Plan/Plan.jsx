@@ -1,21 +1,18 @@
 import s from "./Plan.module.scss";
 import bind from "classnames/bind";
-import { useDispatch, useSelector } from "react-redux";
-import { planSelector } from "../../store/plans/planSelectors";
+import { useDispatch } from "react-redux";
 import { setPlanAction } from "../../store/plans/planActions";
+import { usePrice } from "../../hooks/usePrice";
 
 const cx = bind.bind(s);
 
-function Plan({ id, name, cost, image, isMonthly }) {
+function Plan({ id, name, cost, image, isMonthly, selected = false }) {
   const dispatch = useDispatch();
-  const selectedPlan = useSelector(planSelector);
-  const period = isMonthly ? "mo" : "yr";
-  const rate = isMonthly ? 1 : 10;
-  const costTitle = `$${cost * rate}/${period}`;
+  const costTitle = usePrice(cost);
 
   const planStyle = cx({
     plan: true,
-    plan_selected: id === selectedPlan,
+    plan_selected: selected,
   });
 
   const titleStyle = cx({

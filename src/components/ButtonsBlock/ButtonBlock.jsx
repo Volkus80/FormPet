@@ -26,14 +26,14 @@ function ButtonBlock() {
   let forwardButtonText = step < 4 ? "Next Step" : "Confirm";
 
   return (
-    <div className={s.buttons}>
+    <footer className={s.buttons}>
       <button className={forwardButtonStyles} onClick={() => dispatch(stepUp)}>
         {forwardButtonText}
       </button>
       <button className={backButtonStyle} onClick={() => dispatch(stepDown)}>
         Go Back
       </button>
-    </div>
+    </footer>
   );
 }
 
