@@ -3,8 +3,10 @@
 .button {
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
+    letter-spacing: 0;
+
     &_forward {
         background-color: index.$marine-blue;
         color: index.$magnolia;
@@ -16,11 +18,11 @@
         }
 
         &:hover {
-           background-color: inherit, hsla(0, 0%, 100%, 0.5);
+            background-color: inherit, hsla(0, 0%, 100%, 0.5);
         }
 
     }
 
-    
+
 
 }

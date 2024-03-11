@@ -5,14 +5,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-size: .9rem;
+    font-weight: 500;
+    // letter-spacing: -1;
+
     &_title {
         color: index.$neutral-cool-gray;
-        font-size: 1rem;
-        font-weight: 500;
+        // font-size: 1rem;
+        // font-weight: 500;
     }
+
     &_price {
         color: index.$marine-blue;
-        font-size: 1rem;
-        font-weight: 300;
+        // font-size: 1rem;
+        // font-weight: 300;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1.2rem;
     }
 }

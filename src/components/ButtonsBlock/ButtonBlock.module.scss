@@ -6,12 +6,13 @@
     justify-content: space-between;
     align-items: flex-end;
     flex: 1 1 auto;
-     
+
 }
 
 .button {
     margin-bottom: 1rem;
     font-size: 1rem;
+    // font-weight: 700;
     outline: none;
     border: none;
     background: transparent;
@@ -24,12 +25,14 @@
         background-color: index.$marine-blue;
         color: index.$magnolia;
         border-radius: 10px;
+
         &_confirm {
             background-color: index.$purplish-blue;
             padding: 1rem 1.9rem;
         }
+
         &:hover {
-           opacity: .9;
+            opacity: .9;
         }
     }
 
@@ -37,11 +40,13 @@
         padding-left: 0;
         font-weight: 700;
         color: index.$neutral-cool-gray;
+
         &_hide {
             display: none;
         }
+
         &:hover {
             color: index.$marine-blue;
         }
     }
- }
+}

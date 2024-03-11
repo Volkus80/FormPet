@@ -3,11 +3,71 @@
 .finishing {
     display: flex;
     flex-direction: column;
+
     &_info {
         display: flex;
         flex-direction: column;
-        background-color: index.$light-gray;
+        background-color: index.$magnolia;
         border-radius: 10px;
-        padding: 1rem;
+        padding: 1.3rem 1.5rem;
+        margin-bottom: .5rem;
+
+        &_item_plan {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    }
+
+
+}
+
+.plan_description {
+    &_title {
+        margin-bottom: .5rem;
+    }
+
+    &_change {
+        font-size: .9rem;
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
+
+.item {
+    &:not(:last-child) {
+        margin-bottom: 1.1rem;
+    }
+}
+
+.border {
+    display: none;
+
+    &.active {
+        display: block;
+        height: 5px;
+        border-bottom: 1px index.$light-gray solid;
+    }
+}
+
+.finishing_total {
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .9rem;
+
+    &_name {
+        color: index.$neutral-cool-gray;
+        font-weight: 300;
+    }
+
+    &_price {
+        color: index.$purplish-blue;
+        font-size: 1.3rem;
+        font-weight: 700;
     }
 }
