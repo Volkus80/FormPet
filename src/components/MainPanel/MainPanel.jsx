@@ -7,7 +7,7 @@ import { stepSelector } from "../../store/steps/stepsSelectors";
 
 function MainPanel() {
   const step = useSelector(stepSelector);
-  return (
+  return panelText[step] ? (
     <div className={s.panel}>
       <header className={s.panel_header}>
         <p className={s.panel_header_head}>{panelText[step].header}</p>
@@ -16,7 +16,7 @@ function MainPanel() {
       <MainPanelBody step={step} />
       <ButtonBlock />
     </div>
-  );
+  ) : null;
 }
 
 export { MainPanel };

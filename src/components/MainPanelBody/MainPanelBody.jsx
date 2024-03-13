@@ -2,6 +2,7 @@ import { PersonalInfo } from "../PersonalInfo/PersonalInfo";
 import { SelectPlan } from "../SelectPlan/SelectPlan";
 import { AddOnsList } from "../AddOnsList/AddOnsList";
 import { Finishing } from "../Finishing/Finishing";
+import { LastPage } from "../LastPage/LastPage";
 
 function MainPanelBody({ step }) {
   switch (step) {

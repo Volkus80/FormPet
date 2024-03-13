@@ -6,7 +6,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     padding: .5rem 0;
-    
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    flex: 1 1 280px;
     
     
 
