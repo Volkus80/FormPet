@@ -6,11 +6,11 @@ import { stepSelector } from "../../store/steps/stepsSelectors";
 
 const cx = cnBind.bind(s);
 
-function SBItem({ itemNo, posText, active = 1 }) {
+function SBItem({ itemNo, posText, active }) {
   const step = useSelector(stepSelector);
   const itemClassName = cx({
     item_num: true,
-    active: itemNo <= 4 ? itemNo === step : itemNo === 4,
+    active: step <= 4 ? itemNo === step : itemNo === 4,
   });
 
   return (

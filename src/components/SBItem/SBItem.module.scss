@@ -9,7 +9,7 @@ $num-size: 2rem;
     color: index.$white;
     font-size: calc($num-size / 2.5);
     // letter-spacing: 2px;
-    margin: $num-size;
+    margin: 1rem $num-size;
     height: 2rem;
     // margin-bottom: calc($num-size + 1px);
     

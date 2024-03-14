@@ -3,13 +3,13 @@
     width: 280px;
     // margin: 10px;
     background-image: url('../../images/bg-sidebar-desktop.svg');
-    background-size: contain;
+    background-size:initial;
     background-repeat: no-repeat;
-    padding: .5rem 0;
+    padding: 1.6rem 0;
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
-    flex: 1 1 280px;
+    // flex: 1 1 280px;
     
     
 

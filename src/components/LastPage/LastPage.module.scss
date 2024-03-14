@@ -5,14 +5,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1 1 60%;
+    padding: .5rem 10% 0;
+
+}
+
+.image {
+    margin-bottom: 2rem;
 }
 
 .title {
     text-align: center;
     color: index.$marine-blue;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    margin-bottom: 14px;
 }
 
 .text {
     color: index.$light-gray;
+    text-align: center;
+    max-width: fit-content;
+    margin-bottom: .7rem;
+    line-height: 1.5rem;
 }
