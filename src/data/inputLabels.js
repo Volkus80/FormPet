@@ -1,0 +1,1 @@
+export const inputLabels = ["Name", "Email address", "Phone number"];
