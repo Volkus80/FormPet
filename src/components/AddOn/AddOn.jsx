@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
-import { termSelector } from "../../store/terms/termsSelectors";
+import { useDispatch } from "react-redux";
 import { selectAddOn } from "../../store/addOnsS/addOnsActions";
 import { usePrice } from "../../hooks/usePrice";
 import s from "./AddOn.module.scss";
@@ -8,12 +7,10 @@ import bind from "classnames/bind";
 const cx = bind.bind(s);
 
 function AddOn({ id, header, title, price, selected }) {
-  const isMonthly = useSelector(termSelector);
   const dispatch = useDispatch();
 
   const addonPrice = usePrice(price, true);
-  // const termName = isMonthly ? "mo" : "yr";
-
+ 
   const checkboxStyle = cx({
     addon_checkbox: true,
     checked: selected,
