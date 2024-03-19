@@ -1,23 +1,32 @@
 import s from "./InputBlock.module.scss";
 import bind from "classnames/bind";
-import { useRef, useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useInput } from "../../hooks/useInput";
+import { validator } from "../../utils/validator";
 
 const cx = bind.bind(s);
 
 function InputBlock({ label, ...props }) {
   const errorMessage = "This field is required";
-  
-  const inputRef = useRef();
+  const inputValidator = () => {
+    switch (props.num) {
+      case 0:
+        return validator.userName;
+      case 1:
+        return validator.email;
+      case 2:
+        return validator.phone;
+      default:
+        return (n) => true;
+    }
+  };
+  const { value, ref, error, onBlur, onChange, onFocus } = useInput(inputValidator());
 
-  const [error, setError] = useState(false);
-  const [value, setValue] = useState('');
-
-  const errorShow = cx({inputblock_header_errorMessage: true, error: error});
-
+  const errorShow = cx({ inputblock_header_errorMessage: true, error: error });
 
   useEffect(() => {
-    if(props.num === 0) {
-      inputRef.current.focus();
+    if (props.num === 0) {
+      ref.current.focus();
     }
   }, []);
 
@@ -27,11 +36,14 @@ function InputBlock({ label, ...props }) {
         <p className={s.inputblock_header_label}>{label}</p>
         <p className={errorShow}>{errorMessage}</p>
       </div>
-      <input 
-      type="text" 
-      className={s.inputblock_input} 
-      ref={inputRef} 
-      num={props.num}
+      <input
+        type="text"
+        className={s.inputblock_input}
+        value={value}
+        ref={ref}
+        onChange={onChange}
+        onFocus={() => onFocus}
+        onBlur={onBlur}
       />
     </div>
   );
