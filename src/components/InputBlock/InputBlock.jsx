@@ -2,30 +2,30 @@ import s from "./InputBlock.module.scss";
 import bind from "classnames/bind";
 import { useEffect } from "react";
 import { useInput } from "../../hooks/useInput";
-import { validator } from "../../utils/validator";
+// import { validator } from "../../utils/validator";
 
 const cx = bind.bind(s);
 
-function InputBlock({ label, ...props }) {
+function InputBlock({ label, num, ...props }) {
   const errorMessage = "This field is required";
-  const inputValidator = () => {
-    switch (props.num) {
-      case 0:
-        return validator.userName;
-      case 1:
-        return validator.email;
-      case 2:
-        return validator.phone;
-      default:
-        return (n) => true;
-    }
-  };
-  const { value, ref, error, onBlur, onChange, onFocus } = useInput(inputValidator());
+  // const inputValidator = () => {
+  //   switch (props.num) {
+  //     case 0:
+  //       return validator.userName;
+  //     case 1:
+  //       return validator.email;
+  //     case 2:
+  //       return validator.phone;
+  //     default:
+  //       return (n) => true;
+  //   }
+  // };
+  const { value, ref, error, onBlur, onChange /*, onFocus*/ } = useInput(num);
 
   const errorShow = cx({ inputblock_header_errorMessage: true, error: error });
 
   useEffect(() => {
-    if (props.num === 0) {
+    if (num === 0) {
       ref.current.focus();
     }
   }, []);
@@ -42,7 +42,7 @@ function InputBlock({ label, ...props }) {
         value={value}
         ref={ref}
         onChange={onChange}
-        onFocus={() => onFocus}
+        //onFocus={() => onFocus}
         onBlur={onBlur}
       />
     </div>
